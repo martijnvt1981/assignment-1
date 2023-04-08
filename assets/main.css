@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Tahoma, "Arial Narrow", serif;
+    color: gray;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+}
+
+/* Webstorm doesn't support native CSS nesting yet, otherwise I'd have done that */
+
+.menu {
+    margin-block: 0;
+    padding: 1.25rem;
+    list-style: none;
+    background-color: gold;
+    display: flex;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li:not(:first-child) {
+    margin-left: 1.875rem;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    padding-inline-start: 0;
+    width: 100%;
+    left: .625rem;
+    background-color: goldenrod;
+    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform .3s;
+    top: calc(100% + .625rem);
+}
+
+.submenu li {
+    font-size: .875rem;
+    padding: .3125rem;
+}
+
+.open {
+    transform: scaleY(1)
+}
+
+.main {
+    padding-inline: 1.25rem;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: gold;
+    padding-inline: 1.25rem;
+}
