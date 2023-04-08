@@ -7,8 +7,9 @@ body {
     color: gray;
 }
 
-.container {
+.main {
     flex-grow: 1;
+    padding-inline: 1.25rem;
 }
 
 .nav {
@@ -28,6 +29,11 @@ body {
 
 .menu > li {
     position: relative;
+    cursor: pointer;
+}
+
+.menu > li:hover {
+    color: black;
 }
 
 .menu > li:not(:first-child) {
@@ -51,14 +57,16 @@ body {
 .submenu li {
     font-size: .875rem;
     padding: .3125rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.submenu li:hover {
+    background-color: darkgoldenrod;
 }
 
 .open {
     transform: scaleY(1)
-}
-
-.main {
-    padding-inline: 1.25rem;
 }
 
 .footer {
