@@ -2,8 +2,8 @@ const menuItems = document.querySelectorAll(".menu > li")
 const submenuItems = document.querySelectorAll(".menu > li > ul > li");
 
 menuItems.forEach(menuItem => {
+    const submenu = menuItem.querySelector("ul");
     menuItem.addEventListener('click', () => {
-        const submenu = menuItem.querySelector("ul");
         submenu.classList.toggle('open')
     })
 })
