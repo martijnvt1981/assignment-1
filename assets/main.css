@@ -1,76 +1,76 @@
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    min-height: 100vh;
-    font-family: Tahoma, "Arial Narrow", serif;
-    color: gray;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Tahoma, "Arial Narrow", serif;
+  color: gray;
 }
 
 .main {
-    flex-grow: 1;
-    padding-inline: 1.25rem;
+  flex-grow: 1;
+  padding-inline: 1.25rem;
 }
 
 .nav {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 }
 
 /* Webstorm doesn't support native CSS nesting yet, otherwise I'd have done that */
 
 .menu {
-    margin-block: 0;
-    padding: 1.25rem;
-    list-style: none;
-    background-color: gold;
-    display: flex;
+  margin-block: 0;
+  padding: 1.25rem;
+  list-style: none;
+  background-color: gold;
+  display: flex;
 }
 
 .menu > li {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .menu > li:hover {
-    color: black;
+  color: black;
 }
 
 .menu > li:not(:first-child) {
-    margin-left: 1.875rem;
+  margin-left: 1.875rem;
 }
 
 .submenu {
-    list-style: none;
-    position: absolute;
-    padding-inline-start: 0;
-    width: 100%;
-    left: .625rem;
-    background-color: goldenrod;
-    overflow: hidden;
-    transform-origin: top;
-    transform: scaleY(0);
-    transition: transform .3s;
-    top: calc(100% + .625rem);
+  list-style: none;
+  position: absolute;
+  padding-inline-start: 0;
+  width: 100%;
+  left: 0.625rem;
+  background-color: goldenrod;
+  overflow: hidden;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.3s;
+  top: calc(100% + 0.625rem);
 }
 
 .submenu li {
-    font-size: .875rem;
-    padding: .3125rem;
-    cursor: pointer;
-    color: #fff;
+  font-size: 0.875rem;
+  padding: 0.3125rem;
+  cursor: pointer;
+  color: #fff;
 }
 
 .submenu li:hover {
-    background-color: darkgoldenrod;
+  background-color: darkgoldenrod;
 }
 
 .open {
-    transform: scaleY(1)
+  transform: scaleY(1);
 }
 
 .footer {
-    flex-shrink: 0;
-    background-color: gold;
-    padding-inline: 1.25rem;
+  flex-shrink: 0;
+  background-color: gold;
+  padding-inline: 1.25rem;
 }
