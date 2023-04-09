@@ -21,7 +21,6 @@ menuItems.forEach((menuItem, index) => {
 submenuItems.forEach((subMenuItem) => {
   subMenuItem.addEventListener("click", (event) => {
     event.stopPropagation();
-    const trimmedText = event.target.textContent.trim();
-    alert(trimmedText);
+    alert(event.target.textContent.trim());
   });
 });
