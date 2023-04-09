@@ -21,6 +21,7 @@ menuItems.forEach((menuItem, index) => {
 submenuItems.forEach((subMenuItem) => {
   subMenuItem.addEventListener("click", (event) => {
     event.stopPropagation();
+    // eslint-disable-next-line no-alert
     alert(event.target.textContent.trim());
   });
 });
